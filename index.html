@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Om Patel | Portfolio</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--acc:#38bdf8;--txt:#e2e8f0;--mut:#94a3b8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+nav{position:sticky;top:0;background:#0b1220;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;z-index:10;border-bottom:1px solid #1e293b}
+nav .logo{font-weight:700;color:var(--acc);font-size:1.2rem}
+nav ul{list-style:none;display:flex;gap:22px}
+nav a{color:var(--txt);text-decoration:none;font-size:.95rem;transition:color .2s}
+nav a:hover{color:var(--acc)}
+#menu{display:none;background:none;border:0;color:var(--txt);font-size:1.6rem;cursor:pointer}
+section{padding:70px 6%;max-width:1100px;margin:auto}
+h2{font-size:1.8rem;margin-bottom:28px;color:var(--acc)}
+#home{display:flex;align-items:center;gap:40px;min-height:80vh;flex-wrap:wrap}
+.photo{width:180px;height:180px;border-radius:50%;border:4px solid var(--acc);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:3.4rem;font-weight:700;color:var(--acc);overflow:hidden;flex-shrink:0}
+.photo img{width:100%;height:100%;object-fit:cover}
+#home h1{font-size:2.4rem}
+.tag{color:var(--acc);font-size:1.15rem;margin:6px 0 14px}
+#home p.b{margin-bottom:10px}
+.btn{display:inline-block;background:var(--acc);color:#0b1220;padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:600;border:0;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s;margin:8px 10px 0 0}
+.btn:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(56,189,248,.35)}
+.btn.o{background:none;border:2px solid var(--acc);color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);padding:22px;border-radius:10px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.card h3{margin-bottom:8px}
+.card p{color:var(--mut);font-size:.95rem}
+.chips span{display:inline-block;background:#0b1220;color:var(--acc);padding:3px 10px;border-radius:20px;font-size:.8rem;margin:10px 6px 0 0}
+.bar{margin-bottom:16px}
+.bar div.l{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:4px}
+.track{background:#0b1220;border-radius:8px;height:10px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--acc);border-radius:8px;transition:width 1.2s ease}
+.soft{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.soft span{background:var(--card);padding:6px 14px;border-radius:20px;font-size:.9rem}
+form{display:grid;gap:14px;max-width:560px}
+input,textarea{width:100%;padding:12px;border-radius:6px;border:1px solid #334155;background:var(--card);color:var(--txt);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--acc)}
+footer{text-align:center;padding:28px 6%;background:#0b1220;color:var(--mut);font-size:.9rem}
+footer a{color:var(--acc);margin:0 10px;text-decoration:none}
+@media(max-width:700px){
+#menu{display:block}
+nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:#0b1220;flex-direction:column;padding:16px 6%;gap:14px}
+nav ul.open{display:flex}
+#home{text-align:center;justify-content:center}
+#home h1{font-size:1.9rem}
+}
+</style>
+</head>
+<body>
+<nav>
+<span class="logo">Om Patel</span>
+<button id="menu" aria-label="Menu">&#9776;</button>
+<ul id="links">
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="Om_Patel_Resume.pdf" target="_blank">Resume</a></li>
+</ul>
+</nav>
+
+<section id="home">
+<div class="photo"><img src="photo.jpg" alt="Om Patel" onerror="var p=this.parentNode;p.removeChild(this);p.textContent='OP'"></div>
+<div style="flex:1;min-width:280px">
+<h1>Hi, I'm Om Patel</h1>
+<p class="tag">Aspiring Software Developer | B.Tech CSE Student</p>
+<p class="b">I am a second-year Computer Science and Engineering student at AMTICS, Uka Tarsadia University, Bardoli, Gujarat. I enjoy building web applications with HTML, CSS, JavaScript, PHP and MySQL, and I am learning Git, Linux and data structures.</p>
+<a class="btn" href="#projects">View Projects</a>
+<a class="btn o" href="Om_Patel_Resume.pdf" download>Download Resume</a>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div>
+<h3 style="margin-bottom:14px">Technical</h3>
+<div class="bar"><div class="l"><span>HTML &amp; CSS</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+<div class="bar"><div class="l"><span>JavaScript</span><span>70%</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+<div class="bar"><div class="l"><span>PHP &amp; MySQL</span><span>70%</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+<div class="bar"><div class="l"><span>Java</span><span>60%</span></div><div class="track"><div class="fill" data-w="60"></div></div></div>
+<div class="bar"><div class="l"><span>Python</span><span>65%</span></div><div class="track"><div class="fill" data-w="65"></div></div></div>
+<div class="bar"><div class="l"><span>Git &amp; GitHub</span><span>55%</span></div><div class="track"><div class="fill" data-w="55"></div></div></div>
+<div class="bar"><div class="l"><span>Linux basics</span><span>50%</span></div><div class="track"><div class="fill" data-w="50"></div></div></div>
+</div>
+<div>
+<h3>Tools</h3>
+<div class="soft"><span>VS Code</span><span>XAMPP</span><span>phpMyAdmin</span><span>Git</span><span>Linux terminal</span></div>
+<h3 style="margin-top:26px">Soft skills</h3>
+<div class="soft"><span>Problem solving</span><span>Teamwork</span><span>Communication</span><span>Time management</span><span>Willingness to learn</span></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Medical Management System</h3><p>A medical store system to manage medicines, stock, sales and reports, with owner access to view reports.</p><div class="chips"><span>PHP</span><span>MySQL</span><span>HTML</span></div><p style="margin-top:14px"><a class="btn o" href="https://github.com/omee77/OmPatel_PortfolioWebsite" target="_blank">GitHub</a></p></div>
+<div class="card"><h3>Online Shopping Website</h3><p>A front-end shopping site with product listing, cart and a clean responsive layout.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><p style="margin-top:14px"><a class="btn o" href="https://github.com/omee77/OmPatel_PortfolioWebsite" target="_blank">GitHub</a></p></div>
+<div class="card"><h3>Street Food Online Ordering System</h3><p>A single-shop ordering system with menu filter, cart, order tracking, owner login and daily sales.</p><div class="chips"><span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span></div><p style="margin-top:14px"><a class="btn o" href="https://github.com/omee77/OmPatel_PortfolioWebsite" target="_blank">GitHub</a></p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<form id="cf">
+<input id="n" placeholder="Name" required>
+<input id="e" type="email" placeholder="Email" required>
+<textarea id="m" rows="5" placeholder="Message" required></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
+<p style="margin-top:18px;color:var(--mut)">Email: <a style="color:var(--acc)" href="mailto:25amtics449@gmail.com">25amtics449@gmail.com</a></p>
+</section>
+
+<footer>
+<p><a href="https://www.linkedin.com/in/om-patel-a51399386/" target="_blank">LinkedIn</a><a href="https://github.com/omee77" target="_blank">GitHub</a><a href="mailto:25amtics449@gmail.com">Email</a></p>
+<p style="margin-top:8px">&copy; 2026 Om Patel | B.Tech CSE, AMTICS, Uka Tarsadia University</p>
+</footer>
+
+<script>
+document.getElementById('menu').onclick=function(){document.getElementById('links').classList.toggle('open')};
+document.querySelectorAll('#links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+function fill(){document.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'})}
+var sk=document.getElementById('skills');
+if('IntersectionObserver' in window){new IntersectionObserver(function(en,ob){if(en[0].isIntersecting){fill();ob.disconnect()}}).observe(sk)}else{fill()}
+document.getElementById('cf').addEventListener('submit',function(ev){ev.preventDefault();
+var n=document.getElementById('n').value,e=document.getElementById('e').value,m=document.getElementById('m').value;
+location.href='mailto:25amtics449@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+e+')');});
+</script>
+</body>
+</html>
