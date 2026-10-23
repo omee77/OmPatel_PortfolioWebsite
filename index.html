@@ -22,15 +22,15 @@
   <style>
 /* ==========================================================================
    Om Patel: portfolio  |  Industrial Modern
-   Palette: charcoal #2b2d31, mid-gray #5a6068, off-white #f7f7f5, accent #ff6b4a.
+   Palette: navy #16324f, mid-gray #536b82, off-white #f7f7f5, teal accent #2dd4bf.
    ========================================================================== */
 
 /* ---------- Tokens ---------- */
 :root {
-  --charcoal: #2b2d31;
-  --gray: #5a6068;
+  --charcoal: #16324f;
+  --gray: #536b82;
   --offwhite: #f7f7f5;
-  --accent: #ff6b4a;
+  --accent: #2dd4bf;
 
   --bg: var(--offwhite);
   --bg-alt: #eeeeea;
@@ -42,8 +42,8 @@
   --chip: #ecece8;
   --on-accent: var(--charcoal);
   --focus: var(--charcoal);
-  --shadow: 0 1px 2px rgba(43, 45, 49, 0.06);
-  --shadow-lift: 0 14px 28px -16px rgba(43, 45, 49, 0.4);
+  --shadow: 0 1px 2px rgba(22, 50, 79, 0.06);
+  --shadow-lift: 0 14px 28px -16px rgba(22, 50, 79, 0.4);
 
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -55,17 +55,17 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #1f2124;
-  --bg-alt: #25272b;
+  --bg: #10243a;
+  --bg-alt: #142d46;
   --surface: var(--charcoal);
-  --band: #16171a;
+  --band: #0b1c30;
   --text: var(--offwhite);
-  --muted: #a9aeb5;
-  --border: #3d4046;
-  --chip: #3a3d43;
+  --muted: #adc3d6;
+  --border: #36536b;
+  --chip: #29485f;
   --focus: var(--accent);
   --shadow: none;
-  --shadow-lift: 0 14px 28px -16px rgba(0, 0, 0, 0.7);
+  --shadow-lift: 0 14px 28px -16px rgba(6, 22, 40, 0.7);
   color-scheme: dark;
 }
 
@@ -75,8 +75,8 @@
 .site-footer {
   --bg: var(--band);
   --text: var(--offwhite);
-  --muted: #c3c7cc;
-  --border: #484b51;
+  --muted: #c1d5e3;
+  --border: #49667f;
   --focus: var(--accent);
   background: var(--band);
   color: var(--text);
@@ -367,8 +367,8 @@ a:hover { background: var(--accent); color: var(--on-accent); }
 .portrait-frame {
   position: relative;
   aspect-ratio: 4 / 5;
-  background: #3a3d43;
-  border: 1px solid #5a6068;
+  background: #29485f;
+  border: 1px solid #536b82;
   border-radius: 2px;
   box-shadow: 12px 12px 0 var(--accent);
   overflow: hidden;
@@ -933,7 +933,7 @@ a:hover { background: var(--accent); color: var(--on-accent); }
         themeBtn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
       }
       if (themeMeta) {
-        themeMeta.setAttribute('content', theme === 'dark' ? '#15171A' : '#F8F6F1');
+        themeMeta.setAttribute('content', theme === 'dark' ? '#0b1c30' : '#F8F6F1');
       }
     }
 
